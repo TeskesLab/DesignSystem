@@ -122,7 +122,8 @@ jobs:
       - name: Publish with npm trusted publishing
         shell: bash
         run: |
-          tarballs=(npm-package/*.tgz)
+          # An explicit ./ prevents npm from parsing the path as GitHub shorthand.
+          tarballs=(./npm-package/*.tgz)
           test "${#tarballs[@]}" -eq 1
           test -f "${tarballs[0]}"
           npm publish "${tarballs[0]}" --ignore-scripts --access public --registry https://registry.npmjs.org/

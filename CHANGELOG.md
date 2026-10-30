@@ -1,5 +1,10 @@
 # Changelog
 
+## npm 1.0.2 - 2026-10-30
+
+- Fix local tarball resolution in the npm publishing job: use an explicit `./` prefix instead of GitHub repository shorthand.
+- npm `1.0.1` failed before registry authentication or publication. Its signed tag is retained; Cargo remains on its independent `1.0.1` release.
+
 ## 1.0.1 - 2026-10-30
 
 - Release-pipeline verification patch for npm and Cargo; no component, token, or native API changes.

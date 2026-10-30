@@ -17,6 +17,7 @@
 - Prepared the Rust crate for manual crates.io releases with registry restrictions, package-local usage documentation, explicit packaged files and a dry-run release procedure.
 - Set public npm/Cargo source links and the Go module/import path to `github.com/TeskesLab/DesignSystem`.
 - Removed designer handoff archives, ticket drafts, duplicate guide exports, stale handoff metadata and their obsolete packaging scripts; kept maintained libraries, documentation and visual references.
+- Added separate npm (`npm/v*`) and Cargo (`rust/v*`) GitHub release workflows with manifest/tag equality guards, pre-approval checks, and `release`-gated OIDC publishing; documented manual first-publication bootstrap, exact registry trust settings, and Gitea-to-GitHub tag mirroring.
 
 ## 1.0.0 - 2026-10-29
 

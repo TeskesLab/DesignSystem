@@ -1,0 +1,128 @@
+name: Publish npm
+
+on:
+  push:
+    tags:
+      - 'npm/v*'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: publish-npm-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  checks:
+    if: github.repository == 'TeskesLab/DesignSystem' && github.event.deleted == false
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out the tagged commit
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: '24'
+          package-manager-cache: false
+
+      - name: Require an OIDC-capable npm version
+        shell: bash
+        run: |
+          NPM_VERSION="$(npm --version)" node --input-type=commonjs <<'NODE'
+          const version = process.env.NPM_VERSION;
+          const [major, minor, patch] = version.split('.').map(Number);
+          if (!(major > 11 || (major === 11 && (minor > 5 || (minor === 5 && patch >= 1))))) {
+            throw new Error(`npm >=11.5.1 is required; found ${version}`);
+          }
+          NODE
+
+      - name: Verify the release tag and main ancestry
+        shell: bash
+        env:
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: |
+          node --input-type=commonjs <<'NODE'
+          const { version } = require('./package.json');
+          const expected = `npm/v${version}`;
+          if (process.env.RELEASE_TAG !== expected) {
+            throw new Error(`Release tag must be exactly ${expected}; got ${process.env.RELEASE_TAG}`);
+          }
+          NODE
+          git fetch --no-tags origin +refs/heads/main:refs/remotes/origin/main
+          git merge-base --is-ancestor HEAD refs/remotes/origin/main
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Chromium and system dependencies
+        run: npx --no-install playwright install --with-deps chromium
+
+      - name: Run release checks
+        run: npm run release:check
+
+      - name: Pack the checked release
+        id: pack
+        shell: bash
+        run: |
+          mkdir -p "$RUNNER_TEMP/npm-package"
+          npm run build
+          npm pack --ignore-scripts --json --pack-destination "$RUNNER_TEMP/npm-package" > "$RUNNER_TEMP/npm-pack.json"
+          node --input-type=commonjs <<'NODE'
+          const fs = require('node:fs');
+          const path = require('node:path');
+          const [packed] = JSON.parse(fs.readFileSync(path.join(process.env.RUNNER_TEMP, 'npm-pack.json'), 'utf8'));
+          const tarball = path.join(process.env.RUNNER_TEMP, 'npm-package', packed.filename);
+          fs.appendFileSync(process.env.GITHUB_OUTPUT, `tarball=${tarball}\n`);
+          NODE
+
+      - name: Upload the exact release tarball
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: npm-package
+          path: ${{ steps.pack.outputs.tarball }}
+          if-no-files-found: error
+
+  publish:
+    needs: checks
+    runs-on: ubuntu-24.04
+    environment: release
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - name: Set up Node.js
+        uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: '24'
+          registry-url: 'https://registry.npmjs.org/'
+          package-manager-cache: false
+
+      - name: Require an OIDC-capable npm version
+        shell: bash
+        run: |
+          NPM_VERSION="$(npm --version)" node --input-type=commonjs <<'NODE'
+          const version = process.env.NPM_VERSION;
+          const [major, minor, patch] = version.split('.').map(Number);
+          if (!(major > 11 || (major === 11 && (minor > 5 || (minor === 5 && patch >= 1))))) {
+            throw new Error(`npm >=11.5.1 is required; found ${version}`);
+          }
+          NODE
+
+      - name: Download the checked release tarball
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          name: npm-package
+          path: npm-package
+
+      - name: Publish with npm trusted publishing
+        shell: bash
+        run: |
+          tarballs=(npm-package/*.tgz)
+          test "${#tarballs[@]}" -eq 1
+          test -f "${tarballs[0]}"
+          npm publish "${tarballs[0]}" --ignore-scripts --access public --registry https://registry.npmjs.org/

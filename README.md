@@ -37,7 +37,7 @@ In a [source checkout](https://github.com/TeskesLab/DesignSystem):
 
 Open <http://127.0.0.1:4173/examples/library/> for the React showcase or `/index.html#components` for the designer reference. Sample data is synthetic; no hardware is connected.
 
-See [manual npm releases](docs/13-npm-release.md) for verification, packing, and publication.
+See the [npm release guide](docs/13-npm-release.md) for manual bootstrap and approved tag releases.
 
 ## Native libraries
 
@@ -45,6 +45,8 @@ See [manual npm releases](docs/13-npm-release.md) for verification, packing, and
 - [Rust / egui 0.33 and GPUI Kit 0.8.1](docs/15-rust-library.md): additive `egui` and `gpui-kit` features select the `egui` and `gpui` adapters; the default is dependency-free `no_std` tokens/fonts. Desktop examples use `egui-showcase` and `gpui-showcase`.
 
 Both support light/dark and comfortable/compact preferences. Use local module/path dependencies until native releases are published. See [generation](docs/10-token-schema.md) and [validation](tests/README.md); consumer migration remains separate.
+
+See the [Cargo release guide](docs/16-cargo-release.md) for crate publication.
 
 ## License
 

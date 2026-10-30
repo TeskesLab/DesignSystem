@@ -24,7 +24,7 @@ assert_eq!(background.a, 255);
 
 The adapters are `teskeslab_design_system::egui` (egui 0.33) and `teskeslab_design_system::gpui` (GPUI Kit 0.8.1). Install fonts once and apply themes when preferences change. Native controls preserve toolkit interaction; application state and jobs remain consumer-owned. GPUI Kit needs its platform build dependencies and a working graphics backend.
 
-See the [integration guide](https://github.com/TeskesLab/DesignSystem/blob/main/docs/15-rust-library.md) for initialization, controls, density, native examples and platform requirements, and the [manual release procedure](https://github.com/TeskesLab/DesignSystem/blob/main/docs/16-cargo-release.md) for publication checks.
+See the [integration guide](https://github.com/TeskesLab/DesignSystem/blob/main/docs/15-rust-library.md) for initialization, controls, density, native examples and platform requirements, and the [release guide](https://github.com/TeskesLab/DesignSystem/blob/main/docs/16-cargo-release.md) for manual bootstrap and approved tag releases.
 
 ## Licenses
 

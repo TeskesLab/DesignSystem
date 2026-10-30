@@ -1,12 +1,11 @@
-# Manual npm release
+# npm releases
 
-Package: `@teskeslab/design-system`. The initial npm version is `1.0.0`.
-The `teskeslab` npm scope was created by the project owner. The publishing account
-must have permission to publish packages in that organization.
-
-Publication is manual. No CI workflow, registry token, or automatic publish hook
-is configured. Preparing a tarball does not publish it. Keep npm credentials out
-of this repository.
+Package: `@teskeslab/design-system`. Bootstrap the initial `1.0.0` publication
+manually with an account authorized for the `teskeslab` npm organization, then use
+the tag-triggered GitHub workflow `.github/workflows/publish-npm.yml` for later
+versions. Preparing a tarball does not publish it. These instructions do not
+assert that any version has been published or that cloud execution has succeeded.
+Keep npm credentials out of this repository and out of CI.
 
 ## Prepare and check
 
@@ -54,7 +53,12 @@ source changes before the final release check and pack. Do not rebuild or replac
 the verified tarball between review and publication. Package name, version, public
 access, `latest` tag, and npmjs registry are set in `package.json`.
 
-## Publish only when approved
+## Bootstrap: manual first publication
+
+Complete the checks above before the initial publication. If `1.0.0` is already
+published, do not run this publication again: proceed to trusted-publisher setup
+and bump the version before the first automated release. Published versions cannot
+be reused, even after unpublishing.
 
 Log in interactively with an authorized npm account and use 2FA:
 
@@ -81,12 +85,60 @@ changelog, and use the matching tarball filename in the commands above. Follow
 [versioning rules](07-governance.md). Commit, tag, push, and publication are separate
 operations; none is implied by running the preparation commands.
 
-## Authentication boundary
+## Configure trusted publishing
 
-The public repository is [GitHub](https://github.com/TeskesLab/DesignSystem).
-Publication remains manual; a public repository alone does not configure trusted publishing
-or authorize CI releases. Manual 2FA publication avoids adding a publishing token
-to CI. If automated publication is adopted later, choose its authentication method explicitly.
+After the manual first publication, configure the package's GitHub Actions trusted
+publisher in npm package settings with these exact values:
+
+| Setting | Value |
+| --- | --- |
+| Organization or user | `TeskesLab` |
+| Repository | `DesignSystem` |
+| Workflow filename | `publish-npm.yml` (filename only) |
+| Environment name | `release` |
+| Allowed actions | Allow direct publishing with `npm publish` |
+
+The workflow uses direct publication, not staged publication. New npm trust
+configurations allow staging by default; explicitly enable direct publishing.
+A newly created configuration must complete its first successful publish within
+**2 days**, or it expires. Delete and recreate an expired configuration; plan the
+first version bump and approval before setting it up. Do not use an already
+published version to validate trust.
+
+The shared GitHub environment `release` must require release approval and permit
+the **tag** patterns `npm/v*` and `rust/v*` in its deployment policies. A
+`main`-only branch rule does not permit these tag jobs. Confirm the existing
+environment settings rather than assuming that creating the environment enables
+tags. No long-lived `NPM_TOKEN` or `NODE_AUTH_TOKEN` CI secret is needed: only the
+publishing job receives `id-token: write` and obtains short-lived OIDC credentials.
+
+## Subsequent releases through Gitea
+
+Gitea is the source of truth and mirrors branches and tags to
+[GitHub `TeskesLab/DesignSystem`](https://github.com/TeskesLab/DesignSystem).
+Do not push directly to GitHub.
+
+1. Update `package.json` and `package-lock.json` to the same new, unpublished
+   version and update the changelog. If `1.0.0` was published manually, the first
+   automated release needs a version bump; `npm/v1.0.0` cannot republish it.
+2. Review and commit the workflow and release changes, push the branch to Gitea,
+   and wait for the mirror to synchronize them to GitHub. Ensure trusted
+   publishing and the environment's tag rules are ready before creating a tag.
+3. The maintainer creates a signed, immutable tag `npm/v<version>` on the reviewed
+   release commit, then pushes that tag to Gitea for mirroring. The part after
+   `npm/v` must exactly equal the manifest version, not merely a compatible
+   version. Never move or reuse a release tag.
+4. The tag triggers `publish-npm.yml`. Its read-only checks/build job runs before
+   the environment-gated publishing job. Inspect the completed release checks and
+   the tagged revision before approving the pending `release` deployment.
+   Approval authorizes registry publication; it is not a substitute for tests.
+5. The publishing job uses the exact tagged commit and OIDC. An existing registry
+   version is an error, not an automatic skip. After publication, inspect npm
+   metadata and smoke-test the exact version in a clean consumer as above.
+
+Fix source or version mistakes in a new reviewed commit and a new version/tag;
+do not rewrite a tag to rerun different source. The workflow and this guide do
+not create tags, configure registry trust, or authorize publication by themselves.
 
 Official references: [public scoped packages](https://docs.npmjs.com/creating-and-publishing-scoped-public-packages/),
 [lifecycle scripts](https://docs.npmjs.com/cli/v11/using-npm/scripts/),

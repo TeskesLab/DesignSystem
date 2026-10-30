@@ -1,6 +1,6 @@
 # Rust / egui and GPUI Kit libraries
 
-`rust/` contains the reusable `teskeslab-design-system` crate with optional **egui 0.33.x** and **GPUI Kit 0.8.1** adapters. Both consume the same canonical generated tokens and bundled fonts. Publication to crates.io is manual; see the [Cargo release procedure](16-cargo-release.md). Preparing or checking the crate does not publish it.
+`rust/` contains the reusable `teskeslab-design-system` crate with optional **egui 0.33.x** and **GPUI Kit 0.8.1** adapters. Both consume the same canonical generated tokens and bundled fonts. Publication to crates.io starts with a manual bootstrap; later releases use approved `rust/v*` tags and OIDC. See the [Cargo release procedure](16-cargo-release.md). Preparing or checking the crate does not publish it.
 
 ## Dependency and initialization
 

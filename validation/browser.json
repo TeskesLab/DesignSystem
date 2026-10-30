@@ -1,0 +1,432 @@
+{
+  "version": "1.0.0",
+  "browser": "153.0.8010.0",
+  "playwright": "1.62.1",
+  "date": "2026-10-29",
+  "results": [
+    {
+      "name": "Reflow 320/light/overview",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Reflow 320/light/components",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Reflow 320/light/reading",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Reflow 320/light/workspace",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Reflow 320/light/rules",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Reflow 320/dark/overview",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Reflow 320/dark/components",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Reflow 320/dark/reading",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Reflow 320/dark/workspace",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Reflow 320/dark/rules",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Reflow 390/light/overview",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Reflow 390/light/components",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Reflow 390/light/reading",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Reflow 390/light/workspace",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Reflow 390/light/rules",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Reflow 390/dark/overview",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Reflow 390/dark/components",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Reflow 390/dark/reading",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Reflow 390/dark/workspace",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Reflow 390/dark/rules",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Reflow 768/light/overview",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Reflow 768/light/components",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Reflow 768/light/reading",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Reflow 768/light/workspace",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Reflow 768/light/rules",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Reflow 768/dark/overview",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Reflow 768/dark/components",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Reflow 768/dark/reading",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Reflow 768/dark/workspace",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Reflow 768/dark/rules",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Reflow 1024/light/overview",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Reflow 1024/light/components",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Reflow 1024/light/reading",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Reflow 1024/light/workspace",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Reflow 1024/light/rules",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Reflow 1024/dark/overview",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Reflow 1024/dark/components",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Reflow 1024/dark/reading",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Reflow 1024/dark/workspace",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Reflow 1024/dark/rules",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Reflow 1440/light/overview",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Reflow 1440/light/components",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Reflow 1440/light/reading",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Reflow 1440/light/workspace",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Reflow 1440/light/rules",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Reflow 1440/dark/overview",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Reflow 1440/dark/components",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Reflow 1440/dark/reading",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Reflow 1440/dark/workspace",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Reflow 1440/dark/rules",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Bundled fonts loaded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Form error, focus, correction",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Search, empty, clear, and sorting",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Modal focus containment, Escape, restoration",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Tabs keyboard and source drawer",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Job cancellation waits for acknowledgement",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Job failure preserves partial-output explanation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Lost connection and reconciliation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Successful simulated job",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Sample export is exactly 128 bytes",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Explicit theme URL is deterministic",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Narrow targets and mobile navigation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Reduced motion removes animation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "axe checks across five pages and two themes",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "No JavaScript errors or network requests",
+      "passed": true,
+      "detail": ""
+    }
+  ],
+  "axe": {
+    "available": true,
+    "version": "4.14.0",
+    "violations": []
+  },
+  "snapshots": [
+    {
+      "file": "overview-light-1440.png",
+      "width": 1440,
+      "height": 1100,
+      "theme": "light",
+      "density": "comfortable",
+      "fullPage": false
+    },
+    {
+      "file": "components-light-1440.png",
+      "width": 1440,
+      "height": 1100,
+      "theme": "light",
+      "density": "comfortable",
+      "fullPage": true
+    },
+    {
+      "file": "reading-light-1440.png",
+      "width": 1440,
+      "height": 1100,
+      "theme": "light",
+      "density": "comfortable",
+      "fullPage": false
+    },
+    {
+      "file": "workspace-light-1440.png",
+      "width": 1440,
+      "height": 1100,
+      "theme": "light",
+      "density": "compact",
+      "fullPage": false
+    },
+    {
+      "file": "overview-dark-1440.png",
+      "width": 1440,
+      "height": 1100,
+      "theme": "dark",
+      "density": "comfortable",
+      "fullPage": false
+    },
+    {
+      "file": "components-dark-1440.png",
+      "width": 1440,
+      "height": 1100,
+      "theme": "dark",
+      "density": "comfortable",
+      "fullPage": true
+    },
+    {
+      "file": "reading-dark-1440.png",
+      "width": 1440,
+      "height": 1100,
+      "theme": "dark",
+      "density": "comfortable",
+      "fullPage": false
+    },
+    {
+      "file": "workspace-dark-1440.png",
+      "width": 1440,
+      "height": 1100,
+      "theme": "dark",
+      "density": "compact",
+      "fullPage": false
+    },
+    {
+      "file": "reading-light-390.png",
+      "width": 390,
+      "height": 1100,
+      "theme": "light",
+      "density": "comfortable",
+      "fullPage": true
+    },
+    {
+      "file": "workspace-light-390.png",
+      "width": 390,
+      "height": 1100,
+      "theme": "light",
+      "density": "comfortable",
+      "fullPage": true
+    },
+    {
+      "file": "source-drawer-dark-1440.png",
+      "width": 1440,
+      "height": 1100,
+      "theme": "dark",
+      "density": "comfortable"
+    }
+  ],
+  "limitations": [
+    "No native application builds",
+    "No assistive-technology manual test",
+    "Not a product accessibility certification"
+  ]
+}

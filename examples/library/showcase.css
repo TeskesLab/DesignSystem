@@ -1,0 +1,13 @@
+/* Only gallery composition belongs here; controls use the public library CSS. */
+.showcase-navigation.rail{padding:0}
+.showcase-navigation .rail-bottom{padding:32px 32px 0;margin-bottom:32px}
+.toolbar>.tl-field{display:contents}
+.toolbar>.tl-field>label{font-size:13px;font-weight:400;color:var(--tl-text-secondary)}
+@media(max-width:760px){
+  .showcase-navigation.rail{display:block;position:static;width:auto;background:transparent;color:inherit;z-index:auto}
+  .showcase-navigation .rail-bottom{display:none}
+  .showcase-navigation .tl-navigation-mobile{position:absolute;top:12px;left:20px;z-index:var(--tl-z-nav)}
+  .showcase-navigation .tl-navigation-mobile>.tl-navigation-brand{display:none}
+  .showcase-navigation .tl-navigation-mobile>.tl-button{min-height:44px}
+  .toolbar>.tl-field>label{display:none}
+}

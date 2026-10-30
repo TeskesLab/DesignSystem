@@ -1,0 +1,71 @@
+{
+  "name": "@teskeslab/design-system",
+  "version": "1.0.0",
+  "description": "Teske's Lab design system React components and web tokens",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TeskesLab/DesignSystem.git"
+  },
+  "homepage": "https://github.com/TeskesLab/DesignSystem",
+  "bugs": {
+    "url": "https://github.com/TeskesLab/DesignSystem/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/",
+    "tag": "latest"
+  },
+  "type": "module",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "files": [
+    "dist",
+    "web/tokens.css",
+    "web/components.css",
+    "web/library.css",
+    "assets/fonts",
+    "docs",
+    "PROVENANCE.md",
+    "CHANGELOG.md",
+    "LICENSE",
+    "LICENSE-CC-BY-SA-4.0.txt"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./tokens.css": "./web/tokens.css",
+    "./components.css": "./web/components.css",
+    "./library.css": "./web/library.css",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "node scripts/build_library.mjs",
+    "build:showcase": "node scripts/build_library.mjs --showcase",
+    "preview": "python3 -m http.server 4173 --bind 127.0.0.1",
+    "test:library": "node tests/library.cjs",
+    "typecheck": "node node_modules/typescript/bin/tsc --noEmit",
+    "test:tokens": "python3 tests/check_tokens.py",
+    "release:check": "npm run typecheck && npm run test:tokens && npm run build:showcase && npm run test:library",
+    "prepare": "npm run build"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "axe-core": "4.14.0",
+    "playwright": "1.64.1",
+    "pngjs": "7.0.0",
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.0"
+  },
+  "dependencies": {
+    "tabbable": "6.5.1"
+  }
+}

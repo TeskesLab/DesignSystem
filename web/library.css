@@ -1,0 +1,23 @@
+/* React library additions to the portable component baseline. */
+select[aria-invalid="true"]{border-color:var(--tl-status-danger-text);box-shadow:inset 3px 0 0 var(--tl-status-danger-text)}
+select:disabled,textarea:disabled{background:var(--tl-disabled-bg);color:var(--tl-text-disabled)}
+body:has(dialog.tl-dialog:modal){overflow:hidden}
+.tl-dialog .dialog-head .eyebrow{margin-bottom:12px}
+.tl-callout-body{margin-top:4px}
+.tl-callout-body>:first-child{margin-top:0}
+.tl-callout-body>:last-child{margin-bottom:0}
+.tl-navigation-desktop{padding:32px 20px;background:var(--tl-nav-bg);color:var(--tl-nav-text)}
+.tl-navigation-brand{margin-bottom:16px}
+.tl-navigation-mobile{display:none}
+.tl-navigation-links{display:flex;flex-direction:column;gap:24px}
+:is(.tl-navigation-desktop,.tl-navigation-dialog) .nav-group{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--tl-nav-muted);padding:0 12px;margin-bottom:12px}
+:is(.tl-navigation-desktop,.tl-navigation-dialog) .nav-links{display:flex;flex-direction:column;gap:4px}
+:is(.tl-navigation-desktop,.tl-navigation-dialog) .nav-links a{display:flex;gap:12px;align-items:center;min-height:44px;padding:10px 12px;border-radius:4px;text-decoration:none;color:var(--tl-nav-text);font-size:14px}
+:is(.tl-navigation-desktop,.tl-navigation-dialog) .nav-links a:hover{background:var(--tl-nav-selected-bg)}
+:is(.tl-navigation-desktop,.tl-navigation-dialog) .nav-links a[aria-current="page"]{background:var(--tl-nav-selected-bg);color:var(--tl-nav-selected-text)}
+:is(.tl-navigation-desktop,.tl-navigation-dialog) .nav-links a:focus-visible{outline-color:var(--tl-nav-focus)}
+.tl-navigation-dialog{background:var(--tl-nav-bg);color:var(--tl-nav-text)}
+.tl-navigation-dialog .tl-button{--tl-focus-ring:var(--tl-nav-focus);background:var(--tl-nav-selected-bg);color:var(--tl-nav-text);border-color:var(--tl-nav-muted)}
+.tl-inspector-drawer{position:fixed;inset:0 0 0 auto;z-index:var(--tl-z-nav);overflow:auto}
+.tl-tabs[aria-orientation="vertical"]{flex-direction:column;align-items:flex-start}
+@media(max-width:760px){.tl-navigation-desktop{display:none}.tl-navigation-mobile{display:block}}

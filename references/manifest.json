@@ -1,0 +1,89 @@
+[
+  {
+    "file": "overview-light-1440.png",
+    "width": 1440,
+    "height": 1100,
+    "theme": "light",
+    "density": "comfortable",
+    "fullPage": false
+  },
+  {
+    "file": "components-light-1440.png",
+    "width": 1440,
+    "height": 1100,
+    "theme": "light",
+    "density": "comfortable",
+    "fullPage": true
+  },
+  {
+    "file": "reading-light-1440.png",
+    "width": 1440,
+    "height": 1100,
+    "theme": "light",
+    "density": "comfortable",
+    "fullPage": false
+  },
+  {
+    "file": "workspace-light-1440.png",
+    "width": 1440,
+    "height": 1100,
+    "theme": "light",
+    "density": "compact",
+    "fullPage": false
+  },
+  {
+    "file": "overview-dark-1440.png",
+    "width": 1440,
+    "height": 1100,
+    "theme": "dark",
+    "density": "comfortable",
+    "fullPage": false
+  },
+  {
+    "file": "components-dark-1440.png",
+    "width": 1440,
+    "height": 1100,
+    "theme": "dark",
+    "density": "comfortable",
+    "fullPage": true
+  },
+  {
+    "file": "reading-dark-1440.png",
+    "width": 1440,
+    "height": 1100,
+    "theme": "dark",
+    "density": "comfortable",
+    "fullPage": false
+  },
+  {
+    "file": "workspace-dark-1440.png",
+    "width": 1440,
+    "height": 1100,
+    "theme": "dark",
+    "density": "compact",
+    "fullPage": false
+  },
+  {
+    "file": "reading-light-390.png",
+    "width": 390,
+    "height": 1100,
+    "theme": "light",
+    "density": "comfortable",
+    "fullPage": true
+  },
+  {
+    "file": "workspace-light-390.png",
+    "width": 390,
+    "height": 1100,
+    "theme": "light",
+    "density": "comfortable",
+    "fullPage": true
+  },
+  {
+    "file": "source-drawer-dark-1440.png",
+    "width": 1440,
+    "height": 1100,
+    "theme": "dark",
+    "density": "comfortable"
+  }
+]

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GENERATED semantic color resources. -->
+<resources>
+    <color name="tl_surface_page">#f3f0e6</color>
+    <color name="tl_surface_raised">#fcfaf5</color>
+    <color name="tl_surface_sunken">#e8e8df</color>
+    <color name="tl_surface_hover">#e5eeea</color>
+    <color name="tl_surface_selected">#d3e8e4</color>
+    <color name="tl_text_primary">#101f25</color>
+    <color name="tl_text_secondary">#536268</color>
+    <color name="tl_text_link">#006b72</color>
+    <color name="tl_text_disabled">#536268</color>
+    <color name="tl_border_subtle">#d7dcd6</color>
+    <color name="tl_control_border">#728487</color>
+    <color name="tl_focus_ring">#006a70</color>
+    <color name="tl_action_primary_bg">#00767d</color>
+    <color name="tl_action_primary_hover">#00656c</color>
+    <color name="tl_action_primary_pressed">#00545b</color>
+    <color name="tl_action_primary_text">#ffffff</color>
+    <color name="tl_action_danger_bg">#ad342e</color>
+    <color name="tl_action_danger_hover">#922b26</color>
+    <color name="tl_action_danger_pressed">#7c241f</color>
+    <color name="tl_action_danger_text">#ffffff</color>
+    <color name="tl_disabled_bg">#e2e5df</color>
+    <color name="tl_nav_bg">#101f25</color>
+    <color name="tl_nav_text">#f3f0e6</color>
+    <color name="tl_nav_muted">#b3c5c7</color>
+    <color name="tl_nav_selected_bg">#17333c</color>
+    <color name="tl_nav_selected_text">#7ed6d4</color>
+    <color name="tl_nav_focus">#7ed6d4</color>
+    <color name="tl_status_success_text">#216944</color>
+    <color name="tl_status_success_bg">#eaf4ed</color>
+    <color name="tl_status_warning_text">#82500e</color>
+    <color name="tl_status_warning_bg">#fcf0d8</color>
+    <color name="tl_status_danger_text">#ad342e</color>
+    <color name="tl_status_danger_bg">#fcece8</color>
+    <color name="tl_status_info_text">#135e8c</color>
+    <color name="tl_status_info_bg">#e8f1f8</color>
+    <color name="tl_status_neutral_text">#536268</color>
+    <color name="tl_status_neutral_bg">#e8e8df</color>
+    <color name="tl_code_bg">#e8e8df</color>
+    <color name="tl_code_text">#101f25</color>
+    <color name="tl_chart_a">#00767d</color>
+    <color name="tl_chart_b">#8a4b70</color>
+    <color name="tl_chart_c">#80551c</color>
+</resources>

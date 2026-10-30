@@ -1,0 +1,37 @@
+/* GENERATED starter, scoped to TLRoot descendants. See docs/06-platforms.md. */
+QWidget#TLRoot { background: #f3f0e6; color: #101f25; }
+QWidget#TLRoot QLabel { color: #101f25; }
+QWidget#TLRoot QPushButton {
+  color: #101f25; background: #fcfaf5;
+  border: 1px solid #728487; border-radius: 4px;
+  padding: 8px 16px; min-height: 26px;
+}
+QWidget#TLRoot QPushButton:hover { background: #e5eeea; }
+QWidget#TLRoot QPushButton:pressed { background: #d3e8e4; }
+QWidget#TLRoot QPushButton[tlRole="primary"] {
+  color: #ffffff; background: #00767d;
+  border-color: #00767d;
+}
+QWidget#TLRoot QPushButton[tlRole="primary"]:hover { background: #00656c; }
+QWidget#TLRoot QPushButton[tlRole="primary"]:pressed { background: #00545b; }
+QWidget#TLRoot QPushButton[tlRole="danger"] {
+  color: #ffffff; background: #ad342e;
+  border-color: #ad342e;
+}
+QWidget#TLRoot QPushButton[tlRole="danger"]:hover { background: #922b26; }
+QWidget#TLRoot QPushButton[tlRole="danger"]:pressed { background: #7c241f; }
+QWidget#TLRoot QLineEdit, QWidget#TLRoot QTextEdit {
+  background: #fcfaf5; color: #101f25;
+  border: 1px solid #728487; border-radius: 4px; padding: 8px;
+  selection-background-color: #d3e8e4; selection-color: #101f25;
+}
+QWidget#TLRoot QPushButton:focus, QWidget#TLRoot QLineEdit:focus, QWidget#TLRoot QTextEdit:focus {
+  border: 2px solid #006a70;
+}
+QWidget#TLRoot QPushButton[tlRole="primary"]:focus { border: 2px solid #ffffff; }
+QWidget#TLRoot QPushButton[tlRole="danger"]:focus { border: 2px solid #ffffff; }
+QWidget#TLRoot QPushButton:disabled, QWidget#TLRoot QPushButton[tlRole="primary"]:disabled, QWidget#TLRoot QPushButton[tlRole="danger"]:disabled, QWidget#TLRoot QLineEdit:disabled {
+  background: #e2e5df; color: #536268; border-color: #e2e5df;
+}
+QWidget#TLRoot QProgressBar { border: 1px solid #728487; background: #e8e8df; color: #101f25; }
+QWidget#TLRoot QProgressBar::chunk { background: #006b72; }

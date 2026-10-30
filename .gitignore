@@ -1,0 +1,10 @@
+node_modules/
+dist/
+examples/library/bundle.js
+validation/library/
+teskeslab-design-system-*.tgz
+__pycache__/
+rust/target/
+validation/native/
+Teske-Lab-Design-System-v*.zip
+Teske-Lab-Design-System-v*.pdf

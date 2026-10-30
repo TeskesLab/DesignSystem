@@ -1,6 +1,12 @@
 # Changelog
 
-## Unreleased
+## 1.0.1 - 2026-10-30
+
+- Release-pipeline verification patch for npm and Cargo; no component, token, or native API changes.
+- Use the signed `npm/v1.0.1` and `rust/v1.0.1` tags for the first environment-approved OIDC publications.
+- Establish the unchanged Go module's initial `go/v1.0.0` release tag.
+
+## Package releases 1.0.0 - 2026-10-30
 
 - Added a React web package for shared controls, navigation, overlays, and feedback.
 - Documented library-first adoption before consumer migration.
@@ -19,7 +25,7 @@
 - Removed designer handoff archives, ticket drafts, duplicate guide exports, stale handoff metadata and their obsolete packaging scripts; kept maintained libraries, documentation and visual references.
 - Added separate npm (`npm/v*`) and Cargo (`rust/v*`) GitHub release workflows with manifest/tag equality guards, pre-approval checks, and `release`-gated OIDC publishing; documented manual first-publication bootstrap, exact registry trust settings, and Gitea-to-GitHub tag mirroring.
 
-## 1.0.0 - 2026-10-29
+## Design reference 1.0.0 - 2026-10-29
 
 - Consolidated the Teske's Lab identity and Librarian UI foundations.
 - Added 42 semantic color roles in light/dark, density, typography, spacing, motion, and focus roles.

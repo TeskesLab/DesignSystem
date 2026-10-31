@@ -1,0 +1,8 @@
+[
+  {"code":404,"name":"Not found","headline":"This route<br><span>ends here.</span>","description":"We couldn’t find the page you’re looking for. The link may have moved, or there may be a typo in the address.","action":"Back to the lab","retry":false,"board":"OPEN CIRCUIT","icon":"route"},
+  {"code":403,"name":"Forbidden","headline":"This area is<br><span>out of bounds.</span>","description":"Access to this page isn’t allowed. If you expected to have access, contact the site owner for help.","action":"Back to the lab","retry":false,"board":"ACCESS RESTRICTED","icon":"lock"},
+  {"code":429,"name":"Too many requests","headline":"A little less<br><span>full throttle.</span>","description":"Too many requests arrived in a short time. Give it a moment before trying again.","action":"Back to the lab","retry":false,"board":"RATE LIMITED","icon":"pulse"},
+  {"code":500,"name":"Internal server error","headline":"Something went<br><span>off-script.</span>","description":"The server couldn’t complete this request. Please try again, or head back to the homepage.","action":"Try again","retry":true,"board":"UNEXPECTED FAULT","icon":"fault"},
+  {"code":502,"name":"Bad gateway","headline":"A break in<br><span>the chain.</span>","description":"One of the services behind this page returned an unexpected response. Please try again shortly.","action":"Try again","retry":true,"board":"RESPONSE INTERRUPTED","icon":"link"},
+  {"code":503,"name":"Service unavailable","headline":"Taking a<br><span>short pause.</span>","description":"This service is temporarily unavailable. Please try again in a moment, or return to the homepage.","action":"Try again","retry":true,"board":"TEMPORARILY OFFLINE","icon":"pause"}
+]

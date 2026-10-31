@@ -1,0 +1,22 @@
+{
+  "home": "Voltar ao laboratório",
+  "retry": "Tentar novamente",
+  "skip": "Ir para a mensagem",
+  "homeLabel": "Página inicial do Teske’s Lab",
+  "slogan": "EXPLORAR / CRIAR / DESCOBRIR",
+  "dark": "Usar tema escuro",
+  "light": "Usar tema claro",
+  "preview": "PRÉVIA DAS PÁGINAS",
+  "previewLabel": "Controles da prévia",
+  "pagesLabel": "Páginas de status HTTP",
+  "download": "Baixar páginas",
+  "module": "T/L — MÓDULO DE RESPOSTA",
+  "statuses": {
+    "404": {"name": "Não encontrado", "headline": "Este caminho<br><span>termina aqui.</span>", "description": "Não encontramos a página que você procura. O endereço pode ter mudado ou pode haver um erro de digitação.", "board": "CIRCUITO ABERTO"},
+    "403": {"name": "Acesso negado", "headline": "Esta área tem<br><span>acesso restrito.</span>", "description": "O acesso a esta página não é permitido. Se você deveria ter acesso, entre em contato com o responsável pelo site.", "board": "ACESSO RESTRITO"},
+    "429": {"name": "Muitas solicitações", "headline": "Vamos reduzir<br><span>o ritmo.</span>", "description": "Recebemos muitas solicitações em pouco tempo. Aguarde um momento antes de tentar novamente.", "board": "LIMITE DE REQUISIÇÕES"},
+    "500": {"name": "Erro interno do servidor", "headline": "Algo saiu<br><span>do roteiro.</span>", "description": "O servidor não conseguiu concluir esta solicitação. Tente novamente ou volte à página inicial.", "board": "FALHA INESPERADA"},
+    "502": {"name": "Falha no gateway", "headline": "Um elo<br><span>se rompeu.</span>", "description": "Um dos serviços que atendem esta página retornou uma resposta inesperada. Tente novamente em breve.", "board": "RESPOSTA INTERROMPIDA"},
+    "503": {"name": "Serviço indisponível", "headline": "Uma pausa<br><span>por enquanto.</span>", "description": "Este serviço está temporariamente indisponível. Tente novamente em alguns instantes ou volte à página inicial.", "board": "TEMPORARIAMENTE OFFLINE"}
+  }
+}

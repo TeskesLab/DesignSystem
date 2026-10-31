@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- Add the supplied six-page HTTP status design (403, 404, 429, 500, 502 and 503), with circuit-board illustrations, light/dark themes, standalone documents and a separate review gallery. See [HTTP status pages](docs/17-http-status-pages.md).
+- Detect browser language preferences for English or Brazilian Portuguese across all status pages, with localized accessibility labels and an English no-JavaScript fallback.
+
 ## npm 1.0.2 - 2026-10-30
 
 - Fix local tarball resolution in the npm publishing job: use an explicit `./` prefix instead of GitHub repository shorthand.
